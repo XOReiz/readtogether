@@ -937,13 +937,13 @@ function joinRoom() {
 // ======================================================
 function initPeer(id) {
   // STUN sunucularını ekliyoruz
-  const opts = {
-    debug: 2, // Konsolda hataları görmek için 2 yapalım
+const opts = {
+    debug: 2, 
+    secure: true, // GitHub Pages (HTTPS) için bunu ekliyoruz
     config: {
       'iceServers': [
         { urls: 'stun:stun.l.google.com:19302' },
-        { urls: 'stun:stun1.l.google.com:19302' },
-        { urls: 'stun:stun2.l.google.com:19302' }
+        { urls: 'stun:stun1.l.google.com:19302' }
       ]
     }
   };
